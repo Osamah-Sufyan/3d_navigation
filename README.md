@@ -1,2 +1,2 @@
-# 3d_navigation
+# 3D Navigation
 Progress in developing 3D navigation capbailities
