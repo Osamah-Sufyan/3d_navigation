@@ -18,3 +18,7 @@ man kann den aktuellen Dronen Standort mit state = self._getDroneStateVector(0) 
 
 
 Nachdem die das lernen auf dem Enviroment dann abgeschlossen wurde sieht man einmal den besten lauf den das Pogramm hinbekommen hat und Daten zu wie die Dorohne Statistisch geflogen ist
+
+Ein Fertigen Modell kann dann nochmal in einer SImulation getestet, werden wo man die umgebung nachmal ändern kann und sehen kann wie es sich verhält, aber in dieser Phase lernt es nicht mehr
+
+Hinderniss sind Plazierbar
