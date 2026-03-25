@@ -1,1 +1,21 @@
-docomentation von movements für training
+Grundlegigen Movements
+    Bewegen:            Bewegen in bereich der x,y,z axe
+    Hovern:             das halten der polition
+    Stabilisieren:      nach einer kolision ins Hovern gehen (bestenfalls)
+    Verfolgen:          das Verfolgenvon einem Ziel, Person, etc. in einer vordefinierten höhe und weite
+                        wärend man das Ziel, Person, etc. anschaut
+Komplexe Movements
+    Dive:               ein sturzflug mit der drohne
+                        (https://youtu.be/nsI2eMFEvkc?si=xH6UlE4SsbKnBAmY&t=80)
+    360 Yaw Spin:       eine 360° rotation um eine schnellen Situations-Check zu machen 
+                        (https://youtu.be/H0kxJqmjbgE?si=IMwzaRtzBx9EmcYY&t=21)
+    orbit/Pattern Movements:    das umkreisen eines Ziel, Person, etc. in einer vordefinierten vorm/vormation (keis,quadrat,etc.)
+                        (https://youtu.be/H0kxJqmjbgE?si=KSv3XskPzESIgjY1&t=67)
+    Yaw Spin Rev:       das schnelle umdrehen der drohne, um einen 180° richtungswechsel zu machen
+                        (https://youtu.be/H0kxJqmjbgE?si=PTR_sGmX-LAVc6uV&t=111)
+    Juicy Flick:        das ausweichen eines hindernisses wärend man den punkt oberhalb umfliegt
+                        (https://youtu.be/H0kxJqmjbgE?si=KXreYn2cHs7_Sewo&t=226)
+    Half Matty/Barrolroul:  eine semi rotation in der y achse, damit man senkrecht zum boden ist
+                            (https://youtu.be/H0kxJqmjbgE?si=DA2Oyg9A30ywFZRe&t=306)
+    Trippy Spin:        das umkreisen eines objekt in senkrechter position
+                        (https://youtu.be/H0kxJqmjbgE?si=BvRTGupRpztMpY43&t=462)
