@@ -1,24 +1,26 @@
-In learn.py kann man in Zeile 54 ändenr welche Umgebung Treniert wird und die Umgebung bis an,
--was beobachtet wird
--welche Aktionen erlaubt sind
--wann Episode endet
--wie Reward berechnet wird
--was das Ziel ist
+In learn.py kann man einstellen
+-welche Umgebung Treniert wird                                          train_env = make_vec_env(HoverAviary, ...)
+-Wie die Drone Observiert und was sie observieren kann                  env_kwargs=dict(obs=DEFAULT_OBS, act=DEFAULT_ACT)            (das ist aber auch teilweise im Env über schnittstellen also nicht allein hier)
+-Trainingsdauer                                                         model.learn(total_timesteps=int(1e7))
+-Trainingsmodell auswählen                                              model = PPO('MlpPolicy', train_env)
+-Abbruchskriterium setzen                                               StopTrainingOnRewardThreshold(...)
+-Bereits Ternierte Modells testen
+-MultiAgent einstellen mit mehreren Dronen
 
-fort kann man außerdem das abbruchkriterium editieren
+Für weitere EInstellungen muss man dann eine neues Enviroment machen oder ein bestehenden ändern/benutzen
 
-Für ein Custom Ziel kann man entweder eine eigene Umgebung neu mach oder eine bestehende ändern
-
-ZUm Beispiel in HoverAviary.pc Line 51 kann man 
-self.TARGET_POS = np.array([0,0,1]) frei ändern und neue Kriterien hinzufügen um das ziel zu bearbeiten.
-
-man kann den aktuellen Dronen Standort mit state = self._getDroneStateVector(0) und damit dann das Reward ausrechnen
-
-
+In einen Enviroment wie HoverAviary.py kann man 
+-aktuelle Daten bekommen mit zum Beispiel                                   state = self._getDroneStateVector(0)                      ->Position (x,y,z)
+-bekommen, was die Drone konkret observiert  
+-Einstellwas was die Drone erlaubt ist zu machen                            act=ActionType(...)
+-Das Reward setzen                                                          ret = max(0, 2 - np.linalg.norm(self.TARGET_POS-state[0:3])**4)
+-Termination (wann ist Erfolg)
+-Abbruchkriterium (wenns schief geht)
+-Zieldefinition also worauf die Drone hinarbeitet                           self.TARGET_POS = np.array([0,0,1])
+-Physik und Simulation
+-Hindernisse setzen
 
 
 Nachdem die das lernen auf dem Enviroment dann abgeschlossen wurde sieht man einmal den besten lauf den das Pogramm hinbekommen hat und Daten zu wie die Dorohne Statistisch geflogen ist
 
 Ein Fertigen Modell kann dann nochmal in einer SImulation getestet, werden wo man die umgebung nachmal ändern kann und sehen kann wie es sich verhält, aber in dieser Phase lernt es nicht mehr
-
-Hinderniss sind Plazierbar
