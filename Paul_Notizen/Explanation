@@ -10,7 +10,16 @@ In learn.py kann man einstellen
 Für weitere EInstellungen muss man dann eine neues Enviroment machen oder ein bestehenden ändern/benutzen
 
 In einen Enviroment wie HoverAviary.py kann man 
--aktuelle Daten bekommen mit zum Beispiel                                   state = self._getDroneStateVector(0)                      ->Position (x,y,z)
+-aktuelle Daten                                  
+    state = self._getDroneStateVector(0)
+    state = [
+      x, y, z,          # Position
+      vx, vy, vz,       # Geschwindigkeit
+      roll, pitch, yaw, # Orientierung
+      wx, wy, wz,       # Winkelgeschwindigkeit
+      ...]
+    pos = state[0:3]    bedeutet ->   pos = [x,y,z]
+
 -bekommen, was die Drone konkret observiert  
 -Einstellwas was die Drone erlaubt ist zu machen                            act=ActionType(...)
 -Das Reward setzen                                                          ret = max(0, 2 - np.linalg.norm(self.TARGET_POS-state[0:3])**4)
