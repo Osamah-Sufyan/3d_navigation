@@ -22,8 +22,8 @@ python pid.py
 
 
 Projekt öffnen:
-1.  anaconda Proft öffnen
-2.  cd %USERPROFILE%\Desktop\gym-pybullet-drones
-3.  conda activate drones
-4.  cd gym_pybullet_drones\examples
-4.  python pid.py
+anaconda Proft öffnen
+cd %USERPROFILE%\Desktop\gym-pybullet-drones
+conda activate drones
+cd gym_pybullet_drones\examples
+python learn.py
